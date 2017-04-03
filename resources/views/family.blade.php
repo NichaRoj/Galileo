@@ -43,32 +43,32 @@
                                     @endif
                                     @if(!empty($member['twitter']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-facebook"></i> {{ $member['twitter'] }}
+                                            <i class="fa fa-twitter"></i> {{ $member['twitter'] }}
                                         </div>
                                     @endif
                                     @if(!empty($member['email']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-facebook"></i> {{ $member['email'] }}
+                                            <i class="fa fa-envelope"></i> {{ $member['email'] }}
                                         </div>
                                     @endif
                                     @if(!empty($member['line']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-facebook"></i> {{ $member['line'] }}
+                                            <i class="fa fa-comment"></i> {{ $member['line'] }}
                                         </div>
                                     @endif
                                     @if(!empty($member['instagram']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-facebook"></i> {{ $member['instagram'] }}
+                                            <i class="fa fa-instagram"></i> {{ $member['instagram'] }}
                                         </div>
                                     @endif
                                     @if(!empty($member['phone']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-facebook"></i> {{ $member['phone'] }}
+                                            <i class="fa fa-phone"></i> {{ $member['phone'] }}
                                         </div>
                                     @endif
                                     @if(!empty($member['room']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-facebook"></i> {{ ห้อง $member['room'] }}
+                                            <i class="fa fa-home"></i> {{ ห้อง $member['room'] }}
                                         </div>
                                     @endif
                                 </div>
