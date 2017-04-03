@@ -7,7 +7,7 @@ use App\Student;
 use Illuminate\Http\Request;
 
 class FamilyController extends Controller{
-    public function showRankPage(Request $request, $rank){
+    public function showFamilyPage(Request $request, $rank){
 
     }
 
