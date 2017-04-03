@@ -20,8 +20,6 @@
                 <div class="row">
                     <div class="col-xs-12 text-center">
                         <h3 class="text-muted text-light">แย่จัง ดูเหมือนจะยังไม่มีข้อมูลสำหรับสายรหัสนี้ <i class="fa fa-frown-o"></i></h3>
-                        <br />
-                        <a class="btn btn-lg btn-primary" href="/">กลับไปเพิ่มข้อมูล</a>
                     </div>
                 </div>
                 <!-- ==== -->
