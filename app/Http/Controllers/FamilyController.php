@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class FamilyController extends Controller{
     public function showFamilyPage(Request $request, $rank){
-        $family = Student::where('rank', $rank)->get();
+        $family = Student::where('rank', (int) $rank)->get();
 
         return view('family')->with('family', $family)->with('rank', $rank);
     }
