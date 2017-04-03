@@ -15,55 +15,77 @@
                 </div>
             </div>
 
-            <!-- ==== -->
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    <h3 class="text-muted text-light">แย่จัง ดูเหมือนจะยังไม่มีข้อมูลสำหรับสายรหัสนี้ <i class="fa fa-frown-o"></i></h3>
-                    <br />
-                    <a class="btn btn-lg btn-primary" href="/">กลับไปเพิ่มข้อมูล</a>
-                </div>
-            </div>
-            <!-- ==== -->
-            <br />
-            <!-- ==== -->
-            <div class="row card-row">
-                <div class="col-md-6">
-                    <div class="well">
-                        <h5 class="text-semilight"><b class="text-pink">TU79:</b> คอมพิวตราเซีย ดังฟอร์มาทีก (คอมพิวตราเซีย)</h5>
-                        <hr />
-                        <div class="row contactInfoRow">
-                            <div class="col-sm-6">
-                                <i class="fa fa-facebook"></i> facebook.com/computrasia
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-twitter"></i> @computrasia
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-envelope"></i> computrasia@tucc.club
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-comment"></i> computrasia
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-instagram"></i> computrasia
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-phone"></i> 090-123-4567
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-home"></i> ห้อง 404
-                            </div>
-                        </div>
+            @if(count($family) === 0)
+                <!-- ==== -->
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h3 class="text-muted text-light">แย่จัง ดูเหมือนจะยังไม่มีข้อมูลสำหรับสายรหัสนี้ <i class="fa fa-frown-o"></i></h3>
                         <br />
-                        <blockquote>
-                            Hello World!
-                        </blockquote>
-                        <a class="btn btn-sm btn-success pull-right btnEditData" data-uid="mongodb_id_here">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp;&nbsp;</a>
-                        <br />
+                        <a class="btn btn-lg btn-primary" href="/">กลับไปเพิ่มข้อมูล</a>
                     </div>
                 </div>
-            </div>
-            <!-- ==== -->
+                <!-- ==== -->
+            @else
+                foreach($family as $member)
+                    <!-- ==== -->
+                    <div class="row card-row">
+                        <div class="col-md-6">
+                            <div class="well">
+                                <h5 class="text-semilight">
+                                    <b class="text-pink">TU{{ $member['generation'] }}:</b> {{ $member['title'] }} {{ $member['fname'] }} {{ $member['lname'] }} ({{ $member['nickname'] }})
+                                </h5>
+                                <hr />
+                                <div class="row contactInfoRow">
+                                    @if(!empty($member['facebook']))
+                                        <div class="col-sm-6">
+                                            <i class="fa fa-facebook"></i> {{ $member['facebook'] }}
+                                        </div>
+                                    @endif
+                                    @if(!empty($member['twitter']))
+                                        <div class="col-sm-6">
+                                            <i class="fa fa-facebook"></i> {{ $member['twitter'] }}
+                                        </div>
+                                    @endif
+                                    @if(!empty($member['emai']))
+                                        <div class="col-sm-6">
+                                            <i class="fa fa-facebook"></i> {{ $member['emai'] }}
+                                        </div>
+                                    @endif
+                                    @if(!empty($member['line']))
+                                        <div class="col-sm-6">
+                                            <i class="fa fa-facebook"></i> {{ $member['line'] }}
+                                        </div>
+                                    @endif
+                                    @if(!empty($member['instagram']))
+                                        <div class="col-sm-6">
+                                            <i class="fa fa-facebook"></i> {{ $member['instagram'] }}
+                                        </div>
+                                    @endif
+                                    @if(!empty($member['phone']))
+                                        <div class="col-sm-6">
+                                            <i class="fa fa-facebook"></i> {{ $member['phone'] }}
+                                        </div>
+                                    @endif
+                                    @if(!empty($member['room']))
+                                        <div class="col-sm-6">
+                                            <i class="fa fa-facebook"></i> {{ ห้อง $member['room'] }}
+                                        </div>
+                                    @endif
+                                </div>
+                                @if(!empty($member['message']))
+                                    <br />
+                                    <blockquote>
+                                        {{ $member['message'] }}
+                                    </blockquote>
+                                @endif
+                                <a class="btn btn-sm btn-success pull-right btnEditData" data-uid="mongodb_id_here">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp;&nbsp;</a>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ==== -->
+                @endforeach
+            @endif
 
             <!-- =================== -->
             <div class="modal fade" id="editModal" role="dialog">
