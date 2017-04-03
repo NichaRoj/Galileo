@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="/assets/css/appload.css" />
         <link rel="stylesheet" href="/assets/css/landing.css" />
+        @include('meta_og')
     </head>
     <body>
         <div class="container landingpage_container">
