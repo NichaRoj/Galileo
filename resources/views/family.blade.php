@@ -277,15 +277,6 @@
                 $("#contactGroup").addClass("has-warning");
             }
 
-            checkField("insertForm_password");
-            checkField("insertForm_passwordConfirm");
-
-            if($("#insertForm_passwordConfirm").val() != $("#insertForm_password").val()){
-                $("#insertForm_passwordGroup").addClass("has-warning");
-                $("#insertForm_passwordConfirmGroup").addClass("has-warning");
-                hasErrors++;
-            }
-
             var uid = $("#insertForm_UID").val();
 
             if(hasErrors == 0){
