@@ -68,7 +68,7 @@
                                     @endif
                                     @if(!empty($member['room']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-home"></i> {{ ห้อง $member['room'] }}
+                                            <i class="fa fa-home"></i> ห้อง {{ $member['room'] }}
                                         </div>
                                     @endif
                                 </div>
