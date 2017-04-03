@@ -129,7 +129,7 @@
                                                   <input class="form-control" id="insertForm_room" placeholder="404" type="text">
                                               </div>
                                               <div class="col-md-4" id="insertForm_rankGroup">
-                                                  <span class="help-block">ลำดับที่ <small>*</small></span>
+                                                  <span class="help-block">ลำดับที่ (ตอนสอบเข้า)<small>*</small></span>
                                                   <input class="form-control" id="insertForm_rank" placeholder="1" type="text">
                                               </div>
                                           </div>
@@ -225,12 +225,12 @@
                     $("#insertForm_generation").val(data.generation);
                     $("#insertForm_room").val(data.room);
                     $("#insertForm_rank").val(data.rank);
-                    $("#insertForm_facebook").val(data.facebook);
-                    $("#insertForm_twitter").val(data.twitter);
-                    $("#insertForm_email").val(data.email);
-                    $("#insertForm_line").val(data.line);
-                    $("#insertForm_instagram").val(data.instagram);
-                    $("#insertForm_phone").val(data.phone);
+                    $("#insertForm_facebook").val(data.contact.facebook);
+                    $("#insertForm_twitter").val(data.contact.twitter);
+                    $("#insertForm_email").val(data.contact.email);
+                    $("#insertForm_line").val(data.contact.line);
+                    $("#insertForm_instagram").val(data.contact.instagram);
+                    $("#insertForm_phone").val(data.contact.phone);
                     $("#insertForm_message").val(data.message);
                     $("#insertForm_UID").val(uid);
                     $("#editModal").modal("show");
