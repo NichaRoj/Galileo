@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Moloquent;
 
-class Student extends Model
-{
-    //
+class Student extends Moloquent{
+    protected $collection = 'students';
+    protected $guarded = [];
 }
