@@ -19,7 +19,7 @@ Route::get('/families-test', function(){
     return view('family', ['rank' => '111']);
 });
 
-Route::get('/families/{rank}', 'FamilyController@showRankPage');
+Route::get('/families/{rank}', 'FamilyController@showFamilyPage');
 
 Route::get('/students/{id}', 'FamilyController@getStudentData');
 Route::post('/students', 'FamilyController@createStudent');
