@@ -337,5 +337,6 @@
                 }
             }
         </script>
+        @include('analytic')
     </body>
 </html>
