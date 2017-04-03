@@ -10,7 +10,7 @@
         <div class="container landingpage_container">
             <div class="row mainrow">
                 <div class="col-md-12">
-                    <h1 class="page_title">สายรหัสลำดับที่ <b>{{ Request::input('rank') }}</b></h1>
+                    <h1 class="page_title">สายรหัสลำดับที่ <b>{{ $rank }}</b></h1>
                     <hr />
                 </div>
             </div>

@@ -10,7 +10,7 @@ class FamilyController extends Controller{
     public function showFamilyPage(Request $request, $rank){
         $family = Student::where('rank', $rank)->get();
 
-        return view('family')->with('family', $family);
+        return view('family')->with('family', $family)->with('rank', $rank);
     }
 
     public function getStudentData(Request $request, $id){
