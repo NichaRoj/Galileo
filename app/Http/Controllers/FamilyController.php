@@ -12,7 +12,10 @@ class FamilyController extends Controller{
     }
 
     public function getStudentData(Request $request, $id){
+        $data = Student::where('_id', $id)->firstOrFail();
+        unset($data['password']);
 
+        return response()->json($data, 200);
     }
 
     public function createStudent(Request $request){
