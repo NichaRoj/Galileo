@@ -29,30 +29,29 @@
             <div class="row card-row">
                 <div class="col-md-6">
                     <div class="well">
-                        <h5 class="text-semilight"><b class="text-pink">TU79:</b> คอมพิวตราเซีย ดังฟอร์มาทีก</h5>
+                        <h5 class="text-semilight"><b class="text-pink">TU79:</b> คอมพิวตราเซีย ดังฟอร์มาทีก (คอมพิวตราเซีย)</h5>
                         <hr />
-                        <div class="row">
+                        <div class="row contactInfoRow">
                             <div class="col-sm-6">
                                 <i class="fa fa-facebook"></i> facebook.com/computrasia
                             </div>
                             <div class="col-sm-6">
                                 <i class="fa fa-twitter"></i> @computrasia
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col-sm-6">
                                 <i class="fa fa-envelope"></i> computrasia@tucc.club
                             </div>
                             <div class="col-sm-6">
                                 <i class="fa fa-comment"></i> computrasia
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col-sm-6">
                                 <i class="fa fa-instagram"></i> computrasia
                             </div>
                             <div class="col-sm-6">
                                 <i class="fa fa-phone"></i> 090-123-4567
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-home"></i> ห้อง 404
                             </div>
                         </div>
                         <br />
