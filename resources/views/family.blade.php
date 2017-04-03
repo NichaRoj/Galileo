@@ -208,134 +208,134 @@
         <script src="/assets/js/jquery-3.1.1.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>
         <script>
-        var hasErrors = 0;
-        var csrfToken = "{{ csrf_token() }}";
+            var hasErrors = 0;
+            var csrfToken = "{{ csrf_token() }}";
 
-        $(".btnEditData").click(function(e){
-            e.preventDefault();
-            var uid = $(this).data("uid");
-            $.ajax({
-                url: "/students/" + uid,
-                data: {
-                    _token: csrfToken,
-                },
-                error: function (request, status, error) {
-                    console.log(error);
-                },
-                dataType: "json",
-                success: function(data) {
-                    $("#insertForm_title").val(data.title);
-                    $("#insertForm_fname").val(data.fname);
-                    $("#insertForm_lname").val(data.lname);
-                    $("#insertForm_nickname").val(data.nickname);
-                    $("#insertForm_generation").val(data.generation);
-                    $("#insertForm_room").val(data.room);
-                    $("#insertForm_rank").val(data.rank);
-                    $("#insertForm_facebook").val(data.contact.facebook);
-                    $("#insertForm_twitter").val(data.contact.twitter);
-                    $("#insertForm_email").val(data.contact.email);
-                    $("#insertForm_line").val(data.contact.line);
-                    $("#insertForm_instagram").val(data.contact.instagram);
-                    $("#insertForm_phone").val(data.contact.phone);
-                    $("#insertForm_message").val(data.message);
-                    $("#insertForm_UID").val(uid);
-                    $("#editModal").modal("show");
-                },
-                type: "GET"
-            });
-        });
-
-        $("#btnSubmitData").click(function(e){
-
-            hasErrors = 0;
-            $("#contactGroup").removeClass("has-warning");
-
-            e.preventDefault();
-
-            checkField("insertForm_title");
-            checkField("insertForm_fname");
-            checkField("insertForm_lname");
-            checkField("insertForm_generation");
-            checkField("insertForm_rank");
-
-            var contactFieldsEntered = 0;
-            if(isNotEmpty("insertForm_facebook")){
-                contactFieldsEntered++;
-            }
-            if(isNotEmpty("insertForm_twitter")){
-                contactFieldsEntered++;
-            }
-            if(isNotEmpty("insertForm_email")){
-                contactFieldsEntered++;
-            }
-            if(isNotEmpty("insertForm_line")){
-                contactFieldsEntered++;
-            }
-            if(isNotEmpty("insertForm_instagram")){
-                contactFieldsEntered++;
-            }
-            if(isNotEmpty("insertForm_phone")){
-                contactFieldsEntered++;
-            }
-
-            if(contactFieldsEntered < 1){
-                hasErrors++;
-                $("#contactGroup").addClass("has-warning");
-            }
-
-            var uid = $("#insertForm_UID").val();
-
-            if(hasErrors == 0){
+            $(".btnEditData").click(function(e){
+                e.preventDefault();
+                var uid = $(this).data("uid");
                 $.ajax({
-                       url: "/students/" + uid,
-                       data: {
-                           _token: csrfToken,
-                           title: $("#insertForm_title").val(),
-                           fname: $("#insertForm_fname").val(),
-                           lname: $("#insertForm_lname").val(),
-                           nickname: $("#insertForm_nickname").val(),
-                           generation: parseInt($("#insertForm_generation").val()),
-                           room: parseInt($("#insertForm_room").val()),
-                           rank: parseInt($("#insertForm_rank").val()),
-                           facebook: $("#insertForm_facebook").val(),
-                           twitter: $("#insertForm_twitter").val(),
-                           email: $("#insertForm_email").val(),
-                           line: $("#insertForm_line").val(),
-                           instagram: $("#insertForm_instagram").val(),
-                           phone: $("#insertForm_phone").val(),
-                           message: $("#insertForm_message").val(),
-                           password: $("#insertForm_password").val(),
-                           password_confirm: $("#insertForm_passwordConfirm").val(),
-                       },
-                       error: function (request, status, error) {
-                           console.log(error);
-                       },
-                       dataType: "json",
-                       success: function(data) {
-                           var rankToGoTo = parseInt($("#insertForm_rank").val());
-                           window.location.reload();
-                       },
-                       type: "PUT"
+                    url: "/students/" + uid,
+                    data: {
+                        _token: csrfToken,
+                    },
+                    error: function (request, status, error) {
+                        console.log(error);
+                    },
+                    dataType: "json",
+                    success: function(data) {
+                        $("#insertForm_title").val(data.title);
+                        $("#insertForm_fname").val(data.fname);
+                        $("#insertForm_lname").val(data.lname);
+                        $("#insertForm_nickname").val(data.nickname);
+                        $("#insertForm_generation").val(data.generation);
+                        $("#insertForm_room").val(data.room);
+                        $("#insertForm_rank").val(data.rank);
+                        $("#insertForm_facebook").val(data.contact.facebook);
+                        $("#insertForm_twitter").val(data.contact.twitter);
+                        $("#insertForm_email").val(data.contact.email);
+                        $("#insertForm_line").val(data.contact.line);
+                        $("#insertForm_instagram").val(data.contact.instagram);
+                        $("#insertForm_phone").val(data.contact.phone);
+                        $("#insertForm_message").val(data.message);
+                        $("#insertForm_UID").val(uid);
+                        $("#editModal").modal("show");
+                    },
+                    type: "GET"
                 });
+            });
+
+            $("#btnSubmitData").click(function(e){
+
+                hasErrors = 0;
+                $("#contactGroup").removeClass("has-warning");
+
+                e.preventDefault();
+
+                checkField("insertForm_title");
+                checkField("insertForm_fname");
+                checkField("insertForm_lname");
+                checkField("insertForm_generation");
+                checkField("insertForm_rank");
+
+                var contactFieldsEntered = 0;
+                if(isNotEmpty("insertForm_facebook")){
+                    contactFieldsEntered++;
+                }
+                if(isNotEmpty("insertForm_twitter")){
+                    contactFieldsEntered++;
+                }
+                if(isNotEmpty("insertForm_email")){
+                    contactFieldsEntered++;
+                }
+                if(isNotEmpty("insertForm_line")){
+                    contactFieldsEntered++;
+                }
+                if(isNotEmpty("insertForm_instagram")){
+                    contactFieldsEntered++;
+                }
+                if(isNotEmpty("insertForm_phone")){
+                    contactFieldsEntered++;
+                }
+
+                if(contactFieldsEntered < 1){
+                    hasErrors++;
+                    $("#contactGroup").addClass("has-warning");
+                }
+
+                var uid = $("#insertForm_UID").val();
+
+                if(hasErrors == 0){
+                    $.ajax({
+                           url: "/students/" + uid,
+                           data: {
+                               _token: csrfToken,
+                               title: $("#insertForm_title").val(),
+                               fname: $("#insertForm_fname").val(),
+                               lname: $("#insertForm_lname").val(),
+                               nickname: $("#insertForm_nickname").val(),
+                               generation: parseInt($("#insertForm_generation").val()),
+                               room: parseInt($("#insertForm_room").val()),
+                               rank: parseInt($("#insertForm_rank").val()),
+                               facebook: $("#insertForm_facebook").val(),
+                               twitter: $("#insertForm_twitter").val(),
+                               email: $("#insertForm_email").val(),
+                               line: $("#insertForm_line").val(),
+                               instagram: $("#insertForm_instagram").val(),
+                               phone: $("#insertForm_phone").val(),
+                               message: $("#insertForm_message").val(),
+                               password: $("#insertForm_password").val(),
+                               password_confirm: $("#insertForm_passwordConfirm").val(),
+                           },
+                           error: function (request, status, error) {
+                               console.log(error);
+                           },
+                           dataType: "json",
+                           success: function(data) {
+                               var rankToGoTo = parseInt($("#insertForm_rank").val());
+                               window.location.reload();
+                           },
+                           type: "PUT"
+                    });
+                }
+            });
+            function checkField(field){
+                $("#" + field + "Group").removeClass("has-warning");
+                if($.trim($("#" + field).val()) != "" && $("#" + field).val() !== null){
+                    return true;
+                }else{
+                    $("#" + field + "Group").addClass("has-warning");
+                    hasErrors++;
+                    return false;
+                }
             }
-        });
-        function checkField(field){
-            $("#" + field + "Group").removeClass("has-warning");
-            if($.trim($("#" + field).val()) != "" && $("#" + field).val() !== null){
-                return true;
-            }else{
-                $("#" + field + "Group").addClass("has-warning");
-                hasErrors++;
-                return false;
+            function isNotEmpty(field){
+                if($.trim($("#" + field).val()) != "" && $("#" + field).val() !== null){
+                    return true;
+                }else{
+                    return false;
+                }
             }
-        }
-        function isNotEmpty(field){
-            if($.trim($("#" + field).val()) != "" && $("#" + field).val() !== null){
-                return true;
-            }else{
-                return false;
-            }
-        }
         </script>
     </body>
 </html>
