@@ -23,3 +23,6 @@ a:active{
     -moz-user-select: none;
     -webkit-user-select: none;
 }
+.help-block{
+    margin-bottom: 1px;
+}

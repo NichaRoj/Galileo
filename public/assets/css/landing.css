@@ -5,8 +5,8 @@ body{
     margin-top: 30px;
 }
 .landingpage_title {
-    font-family: "Quicksand", sans-serif;
-    font-weight: 300;
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
     cursor: default;
     user-select: none;
     -moz-user-select: none;
@@ -14,38 +14,10 @@ body{
     letter-spacing: 2px;
 }
 .landingpage_title b {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Kanit", sans-serif;
     color: #FA66C4;
-}
-.inline_title{
-    font-family: "Quicksand", sans-serif;
     font-weight: 300;
-    cursor: default;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    letter-spacing: 2px;
 }
-.inline_title b{
-    font-family: "Quicksand", sans-serif;
-    color: #FA66C4;
-}
-.slogan-col{
-    margin: 40px 0;
-}
-.landingpage_slogan{
-    font-weight: 200;
-    font-size: 2em;
-}
-@media (min-width: 768px) {
-    .slogan-col{
-        margin: 120px 0;
-    }
-    .landingpage_slogan{
-        font-size: 4em;
-    }
-}
-
 .landingpage_iam{
     font-weight: 200;
     margin-top: 35px;
@@ -57,7 +29,12 @@ body{
     font-weight: 300;
 }
 .landing_button_row{
-    margin-top: 11.5px;
+    margin-top: 180px;
+}
+@media (max-width: 992px) {
+    .landing_button_row{
+        margin-top: 100px;
+    }
 }
 .landing_button_well{
     margin-bottom:0px;
@@ -81,7 +58,7 @@ body{
     color:#111;
 }
 @media (min-width: 992px) {
-    .row.landing_button_row [class*='col-']:not(:last-child):after {
+    .row.landing_button_row [class*='col-']:not(:last-child):not(.novert):after {
       background: #e0e0e0;
       width: 1px;
       content: "";
@@ -125,4 +102,10 @@ body{
 .panel-footer{
     font-weight: 300;
     font-size: 1.2em;
+}
+h4{
+    font-weight: 300;
+}
+.mainrow{
+    margin-top: 50px;
 }
