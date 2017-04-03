@@ -66,9 +66,9 @@
                                             <i class="fa fa-phone"></i> {{ $member['contact']['phone'] }}
                                         </div>
                                     @endif
-                                    @if(!empty($member['contact']['room']))
+                                    @if(!empty($member['room']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-home"></i> ห้อง {{ $member['contact']['room'] }}
+                                            <i class="fa fa-home"></i> ห้อง {{ $member['room'] }}
                                         </div>
                                     @endif
                                 </div>
