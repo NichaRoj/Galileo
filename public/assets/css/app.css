@@ -34,3 +34,11 @@
     font-size: 1.2em;
     font-weight: 300;
 }
+.nuancedlink{
+    text-decoration: none;
+    color: inherit;
+}
+.nuancedlink:hover{
+    text-decoration: none;
+    color: inherit;
+}

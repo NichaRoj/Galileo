@@ -49,7 +49,7 @@
             <div class="footer navbar-fixed-bottom">
                 <div class="row">
                     <div class="col-xs-12 text-center">
-                        <span class="text-light">&copy; <?php echo(date("Y")); ?> <small class="text-muted">&#8226;</small> Crafted with <i class="fa fa-heart"></i> by @NamoDev &amp; @TheMiner3746</span>
+                        <span class="text-light">&copy; <?php echo(date("Y")); ?> <small class="text-muted">&#8226;</small> Crafted with <i class="fa fa-heart"></i> by <a href="https://namo.namodev.com" class="nuancedlink" target="_blank">@NamoDev</a> &amp; <a href="https://theminerdev.com" target="_blank" class="nuancedlink">@TheMiner3746</a></span>
                         <br />
                         <span class="text-light">เว็บไซต์นี้ถูกสร้างขึ้นโดยนักเรียน (และศิษย์เก่า) โดยไม่มีส่วนเกี่ยวข้องกับโรงเรียนเตรียมอุดมศึกษาแต่อย่างใด</span>
                         <br /><br />
