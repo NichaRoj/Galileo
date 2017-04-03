@@ -75,7 +75,7 @@
                                 @if(!empty($member['message']))
                                     <br />
                                     <blockquote>
-                                        {{ $member['message'] }}
+                                        {!! nl2br(e($member['message'])) !!}
                                     </blockquote>
                                 @endif
                                 <a class="btn btn-sm btn-success pull-right btnEditData" data-uid="{{ $member['_id'] }}">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp;&nbsp;</a>
