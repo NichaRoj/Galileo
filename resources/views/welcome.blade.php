@@ -45,6 +45,17 @@
                 </div>
             </div>
             <!-- =================== -->
+
+            <div class="footer navbar-fixed-bottom">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <span class="text-light">&copy; <?php echo(date("Y")); ?> <small class="text-muted">&#8226;</small> Crafted with <i class="fa fa-heart"></i> by @NamoDev &amp; @TheMiner3746</span>
+                        <br />
+                        <span class="text-light">เว็บไซต์นี้ถูกสร้างขึ้นโดยนักเรียน (และศิษย์เก่า) โดยไม่มีส่วนเกี่ยวข้องกับโรงเรียนเตรียมอุดมศึกษาแต่อย่างใด</span>
+                        <br /><br />
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- =================== -->
         <div class="modal fade" id="addDataModal" role="dialog">
