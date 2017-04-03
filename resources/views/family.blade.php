@@ -36,39 +36,39 @@
                                 </h5>
                                 <hr />
                                 <div class="row contactInfoRow">
-                                    @if(!empty($member['facebook']))
+                                    @if(!empty($member['contact']['facebook']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-facebook"></i> {{ $member['facebook'] }}
+                                            <i class="fa fa-facebook"></i> {{ $member['contact']['facebook'] }}
                                         </div>
                                     @endif
-                                    @if(!empty($member['twitter']))
+                                    @if(!empty($member['contact']['twitter']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-twitter"></i> {{ $member['twitter'] }}
+                                            <i class="fa fa-twitter"></i> {{ $member['contact']['twitter'] }}
                                         </div>
                                     @endif
-                                    @if(!empty($member['email']))
+                                    @if(!empty($member['contact']['email']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-envelope"></i> {{ $member['email'] }}
+                                            <i class="fa fa-envelope"></i> {{ $member['contact']['email'] }}
                                         </div>
                                     @endif
-                                    @if(!empty($member['line']))
+                                    @if(!empty($member['contact']['line']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-comment"></i> {{ $member['line'] }}
+                                            <i class="fa fa-comment"></i> {{ $member['contact']['line'] }}
                                         </div>
                                     @endif
-                                    @if(!empty($member['instagram']))
+                                    @if(!empty($member['contact']['instagram']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-instagram"></i> {{ $member['instagram'] }}
+                                            <i class="fa fa-instagram"></i> {{ $member['contact']['instagram'] }}
                                         </div>
                                     @endif
-                                    @if(!empty($member['phone']))
+                                    @if(!empty($member['contact']['phone']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-phone"></i> {{ $member['phone'] }}
+                                            <i class="fa fa-phone"></i> {{ $member['contact']['phone'] }}
                                         </div>
                                     @endif
-                                    @if(!empty($member['room']))
+                                    @if(!empty($member['contact']['room']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-home"></i> ห้อง {{ $member['room'] }}
+                                            <i class="fa fa-home"></i> ห้อง {{ $member['contact']['room'] }}
                                         </div>
                                     @endif
                                 </div>
