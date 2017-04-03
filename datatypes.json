@@ -1,0 +1,23 @@
+{
+    "_id" : ObjectID(some-weird-mongo-stuff),
+
+    "title" : "",
+    "fname" : "",
+    "lname" : "",
+    "nickname" : "",
+    "generation" : (integer),
+    "room" : (integer),
+    "rank" : (integer),
+
+    "contact" : {
+        "phone" : "",
+        "email" : "",
+        "facebook" : "",
+        "twitter" : "",
+        "line" : "",
+        "instagram" : "",
+    },
+
+    "password": "(some-sort-of-hashed-password)",
+
+}

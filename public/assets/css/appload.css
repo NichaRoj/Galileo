@@ -1,0 +1,17 @@
+/*
+| EntThai
+| Application Style Loader
+*/
+
+/* Fonts */
+@import url("../fonts/kanit/kanit.css");
+@import url("../fonts/fontawesome/fontawesome.css");
+
+/* Fonts - dev */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,700');
+
+/* Base Theme */
+@import url("base_theme.css");
+
+/* Custom Application CSS */
+@import url("app.css");

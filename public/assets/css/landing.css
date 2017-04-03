@@ -1,0 +1,128 @@
+body{
+    background: #fcfcfc;
+}
+.landingpage_container {
+    margin-top: 30px;
+}
+.landingpage_title {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    cursor: default;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    letter-spacing: 2px;
+}
+.landingpage_title b {
+    font-family: "Quicksand", sans-serif;
+    color: #FA66C4;
+}
+.inline_title{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    cursor: default;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    letter-spacing: 2px;
+}
+.inline_title b{
+    font-family: "Quicksand", sans-serif;
+    color: #FA66C4;
+}
+.slogan-col{
+    margin: 40px 0;
+}
+.landingpage_slogan{
+    font-weight: 200;
+    font-size: 2em;
+}
+@media (min-width: 768px) {
+    .slogan-col{
+        margin: 120px 0;
+    }
+    .landingpage_slogan{
+        font-size: 4em;
+    }
+}
+
+.landingpage_iam{
+    font-weight: 200;
+    margin-top: 35px;
+    margin-bottom: 0px;
+    font-size: 2.25em;
+    letter-spacing: .05em;
+}
+.landing_well_title{
+    font-weight: 300;
+}
+.landing_button_row{
+    margin-top: 11.5px;
+}
+.landing_button_well{
+    margin-bottom:0px;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    background-color: rgba(255,255,255,0);
+}
+.landing_button_well h3{
+    font-weight: 300;
+    margin-top:30px;
+    margin-bottom:5px;
+}
+.landing_button_well h6{
+    font-weight: 300;
+    margin-top:0px;
+    margin-bottom:30px;
+}
+.landing_button_well h3:hover{
+    color:#111;
+}
+@media (min-width: 992px) {
+    .row.landing_button_row [class*='col-']:not(:last-child):after {
+      background: #e0e0e0;
+      width: 1px;
+      content: "";
+      display:block;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      right: 0;
+      min-height: 50px;
+      height:100%;
+    }
+}
+.section_header{
+    font-weight: 200;
+    letter-spacing: .03em;
+    margin: 35px 0;
+}
+.news-body{
+    min-height: 160px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.footer_link{
+    color: #FF85D2;
+    text-decoration: none;
+}
+.footer_link:hover{
+    color: #FA66C4;
+    text-decoration: none;
+}
+.footer_link:visited{
+    color: #FF85D2;
+    text-decoration: none;
+}
+.footer_link:active{
+    text-decoration: none;
+}
+.panel-footer{
+    font-weight: 300;
+    font-size: 1.2em;
+}
