@@ -26,7 +26,7 @@
                 </div>
                 <!-- ==== -->
             @else
-                foreach($family as $member)
+                @foreach($family as $member)
                     <!-- ==== -->
                     <div class="row card-row">
                         <div class="col-md-6">
@@ -46,9 +46,9 @@
                                             <i class="fa fa-facebook"></i> {{ $member['twitter'] }}
                                         </div>
                                     @endif
-                                    @if(!empty($member['emai']))
+                                    @if(!empty($member['email']))
                                         <div class="col-sm-6">
-                                            <i class="fa fa-facebook"></i> {{ $member['emai'] }}
+                                            <i class="fa fa-facebook"></i> {{ $member['email'] }}
                                         </div>
                                     @endif
                                     @if(!empty($member['line']))
