@@ -78,7 +78,7 @@
                                         {{ $member['message'] }}
                                     </blockquote>
                                 @endif
-                                <a class="btn btn-sm btn-success pull-right btnEditData" data-uid="mongodb_id_here">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp;&nbsp;</a>
+                                <a class="btn btn-sm btn-success pull-right btnEditData" data-uid="{{ $member['_id'] }}">&nbsp;&nbsp;<i class="fa fa-edit"></i>&nbsp;&nbsp;</a>
                                 <br />
                             </div>
                         </div>
