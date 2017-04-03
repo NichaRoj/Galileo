@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ranks/{rank}', 'FamilyController@showRankPage');
+Route::get('/families/{rank}', 'FamilyController@showRankPage');
 
 Route::get('/students/{id}', 'FamilyController@getStudentData');
 Route::post('/students', 'FamilyController@createStudent');
