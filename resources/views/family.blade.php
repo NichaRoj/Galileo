@@ -207,6 +207,7 @@
                                               <div class="col-md-12" id="insertForm_passwordGroup">
                                                   <span class="help-block">รหัสผ่าน</span>
                                                   <input class="form-control" id="insertForm_password" placeholder="รหัสผ่านที่ตั้งไว้ตอนเพิ่มข้อมูล" type="password">
+                                                  <span class="help-block" id="passwordHelpText"></span>
                                               </div>
                                           </div>
                                           <hr />
@@ -273,6 +274,8 @@
 
                 hasErrors = 0;
                 $("#contactGroup").removeClass("has-warning");
+                $("#insertForm_passwordGroup").removeClass("has-warning");
+                $("#passwordHelpText").empty();
 
                 e.preventDefault();
 
@@ -333,7 +336,14 @@
                                password_confirm: $("#insertForm_passwordConfirm").val(),
                            },
                            error: function (request, status, error) {
-                               console.log(error);
+                               switch(request.status){
+                                   case 401:
+                                        $("#insertForm_passwordGroup").addClass("has-warning");
+                                        $("#passwordHelpText").html("<span class=\"text-warning\"><i class=\"fa fa-exclamation-triangle\"></i> รหัสผ่านสำหรับแก้ไขข้อมูลไม่ถูกต้อง</span>");
+                                   break;
+                                   default:
+                                        console.log(error);
+                               }
                            },
                            dataType: "json",
                            success: function(data) {
