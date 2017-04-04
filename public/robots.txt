@@ -1,2 +1,56 @@
+# Notice: Crawling Galileo is prohibited unless you have express written permission.
+
+User-agent: Applebot
+Disallow: /families/
+Disallow: /students/
+
+User-agent: baiduspider
+Disallow: /families/
+Disallow: /students/
+
+User-agent: Bingbot
+Disallow: /families/
+Disallow: /students/
+
+User-agent: Googlebot
+Disallow: /families/
+Disallow: /students/
+
+User-agent: msnbot
+Disallow: /families/
+Disallow: /students/
+
+User-agent: Naverbot
+Disallow: /families/
+Disallow: /students/
+
+User-agent: seznambot
+Disallow: /families/
+Disallow: /students/
+
+User-agent: Slurp
+Disallow: /families/
+Disallow: /students/
+
+User-agent: teoma
+Disallow: /families/
+Disallow: /students/
+
+User-agent: Twitterbot
+Disallow: /families/
+Disallow: /students/
+
+User-agent: Yandex
+Disallow: /families/
+Disallow: /students/
+
+User-agent: Yeti
+Disallow: /families/
+Disallow: /students/
+
+User-agent: ia_archiver
+Allow: /families/
+Disallow: /students/
+
 User-agent: *
-Disallow:
+Disallow: /
