@@ -200,6 +200,7 @@
         <!-- =================== -->
         <script src="/assets/js/jquery-3.1.1.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/bootbox.min.js"></script>
         <script>
 
             var hasErrors = 0;
@@ -247,6 +248,11 @@
 
                 e.preventDefault();
                 var csrfToken = "{{ csrf_token() }}";
+
+                var dialog = bootbox.dialog({
+                    message: '<p class="text-center"><i class="fa fa-spinner fa-spin"></i> กำลังโหลดข้อมูล กรุณารอสักครู่...</p>',
+                    closeButton: false
+                });
 
                 checkField("insertForm_title");
                 checkField("insertForm_fname");
@@ -312,15 +318,19 @@
                                password_confirm: $("#insertForm_passwordConfirm").val(),
                            },
                            error: function (request, status, error) {
+                               dialog.modal('hide');
                                console.log(error);
                            },
                            dataType: "json",
                            success: function(data) {
+                               dialog.modal('hide');
                                var rankToGoTo = parseInt($("#insertForm_rank").val());
                                window.location.href = "/families/" + $("#insertForm_program").val() + "/" + rankToGoTo;
                            },
                            type: "POST"
                     });
+                }else{
+                    dialog.modal('hide');
                 }
             });
             function checkField(field){

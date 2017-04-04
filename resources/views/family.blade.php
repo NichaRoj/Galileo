@@ -231,6 +231,8 @@
         </div>
         <script src="/assets/js/jquery-3.1.1.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/bootbox.min.js"></script>
+
         <script>
             var hasErrors = 0;
             var csrfToken = "{{ csrf_token() }}";
@@ -240,16 +242,24 @@
                 var uid = $(this).data("uid");
                 $("#insertForm_passwordGroup").removeClass("has-warning");
                 $("#passwordHelpText").empty();
+
+                var dialog = bootbox.dialog({
+                    message: '<p class="text-center"><i class="fa fa-spinner fa-spin"></i> กำลังโหลดข้อมูล กรุณารอสักครู่...</p>',
+                    closeButton: false
+                });
+
                 $.ajax({
                     url: "/students/" + uid,
                     data: {
                         _token: csrfToken,
                     },
                     error: function (request, status, error) {
+                        dialog.modal('hide');
                         console.log(error);
                     },
                     dataType: "json",
                     success: function(data) {
+                        dialog.modal('hide');
                         $("#insertForm_title").val(data.title);
                         $("#insertForm_fname").val(data.fname);
                         $("#insertForm_lname").val(data.lname);
@@ -280,6 +290,11 @@
                 $("#passwordHelpText").empty();
 
                 e.preventDefault();
+
+                var dialog = bootbox.dialog({
+                    message: '<p class="text-center"><i class="fa fa-spinner fa-spin"></i> กำลังโหลดข้อมูล กรุณารอสักครู่...</p>',
+                    closeButton: false
+                });
 
                 checkField("insertForm_title");
                 checkField("insertForm_fname");
@@ -338,6 +353,7 @@
                                password_confirm: $("#insertForm_passwordConfirm").val(),
                            },
                            error: function (request, status, error) {
+                               dialog.modal('hide');
                                switch(request.status){
                                    case 401:
                                         $("#insertForm_passwordGroup").addClass("has-warning");
@@ -349,11 +365,14 @@
                            },
                            dataType: "json",
                            success: function(data) {
+                               dialog.modal('hide');
                                var rankToGoTo = parseInt($("#insertForm_rank").val());
                                window.location.reload();
                            },
                            type: "PUT"
                     });
+                }else{
+                    dialog.modal('hide');
                 }
             });
             function checkField(field){
