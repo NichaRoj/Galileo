@@ -238,6 +238,8 @@
             $(".btnEditData").click(function(e){
                 e.preventDefault();
                 var uid = $(this).data("uid");
+                $("#insertForm_passwordGroup").removeClass("has-warning");
+                $("#passwordHelpText").empty();
                 $.ajax({
                     url: "/students/" + uid,
                     data: {
