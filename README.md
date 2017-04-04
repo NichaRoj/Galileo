@@ -5,7 +5,7 @@ The code family finder for new TU students
 Nothing too complicated - it just matches students' data and group them into their respective code families.
 
 ### Is it safe & secure?
-Yes it is! The project's open-sourced here, so feel free to check around with the code. Should there be bugs, please open an issue here on GitHub (or create a patch make a pull request!)
+Yes it is! The project's open-sourced here, so feel free to play around. Should there be bugs, please open an issue here on GitHub (or create a patch and make a pull request!)
 
 ===================================================
 
