@@ -117,11 +117,11 @@
                                       <h6>ข้อมูลหลัก (ช่องที่มีเครื่องหมาย '*' จำเป็นต้องระบุ)<br /></h6>
                                       <div class="form-horizontal">
                                           <div class="row">
-                                              <div class="col-md-2 col-xs-4" id="insertForm_titleGroup">
+                                              <div class="col-md-2" id="insertForm_titleGroup">
                                                   <span class="help-block">คำนำหน้าชื่อ <small>*</small></span>
                                                   <input class="form-control" id="insertForm_title" placeholder="มาดมัวแซล" type="text">
                                               </div>
-                                              <div class="col-md-5 col-xs-8" id="insertForm_fnameGroup">
+                                              <div class="col-md-5" id="insertForm_fnameGroup">
                                                   <span class="help-block">ชื่อ <small>*</small></span>
                                                   <input class="form-control" id="insertForm_fname" placeholder="คอมพิวตราเซีย" type="text">
                                               </div>
