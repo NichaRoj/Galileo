@@ -178,11 +178,22 @@
             var hasErrors = 0;
 
             $(function(){
+                adjustFooter();
+            });
+
+            $(window).on('resize', function(){
+                adjustFooter();
+            });
+
+            function adjustFooter(){
                 if ($(window).width() < 767){
                     $("#daFooter").removeClass("navbar-fixed-bottom");
-                    $("#daFooter").css({"margin-top": "70px", "margin-bottom" : "0px"});
+                    $("#daFooter").css({"margin-top": "70px"});
+                }else{
+                    $("#daFooter").addClass("navbar-fixed-bottom");
+                    $("#daFooter").css({"margin-top": "0px"});
                 }
-            });
+            }
 
             $("#btnSearch").click(function(e){
                 e.preventDefault();
