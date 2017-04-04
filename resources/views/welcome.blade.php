@@ -317,7 +317,7 @@
                            dataType: "json",
                            success: function(data) {
                                var rankToGoTo = parseInt($("#insertForm_rank").val());
-                               window.location.href = "/families/" + rankToGoTo;
+                               window.location.href = "/families/" + $("#insertForm_program").val() + "/" + rankToGoTo;
                            },
                            type: "POST"
                     });
