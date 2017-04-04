@@ -36,9 +36,8 @@
                 </div>
                 <!-- ==== -->
             @else
+            <div class="row card-row">
                 @foreach($family as $member)
-                    <!-- ==== -->
-                    <div class="row card-row">
                         <div class="col-md-6">
                             <div class="well">
                                 <h5 class="text-semilight">
@@ -92,9 +91,8 @@
                                 <br />
                             </div>
                         </div>
-                    </div>
-                    <!-- ==== -->
                 @endforeach
+                </div>
             @endif
 
             <br />
