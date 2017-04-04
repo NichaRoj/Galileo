@@ -7,10 +7,12 @@ use App\Student;
 use Illuminate\Http\Request;
 
 class FamilyController extends Controller{
-    public function showFamilyPage(Request $request, $rank){
-        $family = Student::where('rank', (int) $rank)->get();
-
-        return view('family')->with('family', $family)->with('rank', $rank);
+    public function showFamilyPage(Request $request, $program, $rank){
+        $family = Student::where([
+            ['rank', '=', (int) $rank],
+            ['program', '=', (string) $program]
+        ])->get();
+        return view('family')->with('family', $family)->with('rank', $rank)->with('program', $program);
     }
 
     public function getStudentData(Request $request, $id){
@@ -29,6 +31,7 @@ class FamilyController extends Controller{
             'generation' => 'required|numeric|max:80',
             'room' => 'numeric',
             'rank' => 'required|numeric',
+            'program' => 'required',
             'facebook' => 'required_without_all:phone,email,twitter,line,instagram',
             'email' => 'required_without_all:phone,facebook,twitter,line,instagram',
             'twitter' => 'required_without_all:phone,email,facebook,line,instagram',
@@ -48,6 +51,7 @@ class FamilyController extends Controller{
             'generation' => (int) $request->input('generation'),
             'room' => (int) $request->input('room'),
             'rank' => (int) $request->input('rank'),
+            'program' => (string) $request->input('program'),
             'contact' => [
                 'facebook' => (string) $request->input('facebook'),
                 'email' => (string) $request->input('email'),

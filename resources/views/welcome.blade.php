@@ -17,17 +17,31 @@
             </div>
             <!-- =================== -->
             <div class="row landing_button_row">
-                <div class="col-md-6 text-center">
+                <div class="col-md-8 text-center">
                     <div class="form-horizontal">
                         <div class="col-xs-10 col-xs-offset-1">
                             <br />
                             <h4><i class="fa fa-search"></i> ค้นหาสายลำดับ</h4>
-                            <br />
                             <div class="row form-group" id="searchGroup">
-                                <div class="col-xs-8 novert">
-                                    <input class="form-control" id="searchQuery" name="searchQuery" placeholder="ใส่ลำดับที่ต้องการค้นหาที่นี่..." type="text">
+                                <div class="col-sm-6 novert">
+                                    <br />
+                                    <select class="form-control" id="searchProgram">
+                                        <option value="sc">วิทย์ - คณิต</option>
+                                        <option value="am">ภาษา - คณิตศาสตร์ (ศิลป์คำนวณ)</option>
+                                        <option value="af">ภาษา - ฝรั่งเศส</option>
+                                        <option value="ad">ภาษา - เยอรมัน</option>
+                                        <option value="aj">ภาษา - ญี่ปุ่น</option>
+                                        <option value="as">ภาษา - สเปน</option>
+                                        <option value="ac">ภาษา - จีน</option>
+                                        <option value="ak">ภาษา - เกาหลี</option>
+                                    </select>
                                 </div>
-                                <div class="col-xs-4">
+                                <div class="col-sm-3 novert">
+                                    <br />
+                                    <input class="form-control" id="searchQuery" name="searchQuery" placeholder="ลำดับที่..." type="text">
+                                </div>
+                                <div class="col-sm-3">
+                                    <br />
                                     <a class="btn btn-block btn-primary" href="#" id="btnSearch">ค้นหา</a>
                                 </div>
                             </div>
@@ -36,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 text-center">
+                <div class="col-md-4 text-center">
                     <div class="col-xs-10 col-xs-offset-1">
                         <br />
                         <h4><i class="fa fa-user-plus"></i> เพิ่มข้อมูล</h4>
@@ -91,17 +105,30 @@
                                               <span class="help-block">ชื่อเล่น</span>
                                               <input class="form-control" id="insertForm_nickname" placeholder="คอมพิวตราเซีย" type="text">
                                           </div>
-                                          <div class="col-md-2" id="insertForm_generationGroup">
+                                          <div class="col-md-1" id="insertForm_generationGroup">
                                               <span class="help-block">รุ่น <small>*</small></span>
                                               <input class="form-control" id="insertForm_generation" placeholder="1" type="text">
                                           </div>
-                                          <div class="col-md-3" id="insertForm_roomGroup">
-                                              <span class="help-block">ห้อง (ปีการศึกษาล่าสุด)</span>
+                                          <div class="col-md-2" id="insertForm_roomGroup">
+                                              <span class="help-block">ห้อง (ล่าสุด)</span>
                                               <input class="form-control" id="insertForm_room" placeholder="404" type="text">
                                           </div>
-                                          <div class="col-md-4" id="insertForm_rankGroup">
+                                          <div class="col-md-3" id="insertForm_rankGroup">
                                               <span class="help-block">ลำดับที่ (ตอนสอบเข้า)<small>*</small></span>
                                               <input class="form-control" id="insertForm_rank" placeholder="1" type="text">
+                                          </div>
+                                          <div class="col-md-3" id="insertForm_programGroup">
+                                              <span class="help-block">แผนการเรียน<small>*</small></span>
+                                              <select class="form-control" id="insertForm_program">
+                                                  <option value="sc">วิทย์ - คณิต</option>
+                                                  <option value="am">ภาษา - คณิตศาสตร์ (ศิลป์คำนวณ)</option>
+                                                  <option value="af">ภาษา - ฝรั่งเศส</option>
+                                                  <option value="ad">ภาษา - เยอรมัน</option>
+                                                  <option value="aj">ภาษา - ญี่ปุ่น</option>
+                                                  <option value="as">ภาษา - สเปน</option>
+                                                  <option value="ac">ภาษา - จีน</option>
+                                                  <option value="ak">ภาษา - เกาหลี</option>
+                                              </select>
                                           </div>
                                       </div>
                                       <hr />
@@ -202,7 +229,7 @@
 
                 var rank = parseInt($("#searchQuery").val());
                 if(!isNaN(rank)){
-                    window.location.href = "/families/" + rank;
+                    window.location.href = "/families/" + $("#searchProgram").val() + "/" + rank;
                 }else{
                     $("#searchGroup").addClass("has-warning");
                     $("#searchHelpText").html("<span class=\"text-warning\"><i class=\"fa fa-exclamation-triangle\"></i> ข้อมูลต้องเป็นตัวเลขเท่านั้น</span>");
@@ -273,6 +300,7 @@
                                generation: parseInt($("#insertForm_generation").val()),
                                room: parseInt($("#insertForm_room").val()),
                                rank: parseInt($("#insertForm_rank").val()),
+                               program: $("#insertForm_program").val(),
                                facebook: $("#insertForm_facebook").val(),
                                twitter: $("#insertForm_twitter").val(),
                                email: $("#insertForm_email").val(),
