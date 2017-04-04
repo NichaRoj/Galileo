@@ -12,6 +12,11 @@ class FamilyController extends Controller{
             ['rank', '=', (int) $rank],
             ['program', '=', (string) $program]
         ])->get();
+
+        if($rank <= 0){
+            abort(404);
+        }
+
         return view('family')->with('family', $family)->with('rank', $rank)->with('program', $program);
     }
 
