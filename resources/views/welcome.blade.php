@@ -185,7 +185,8 @@
                                       </div>
                                       <hr />
                                       <div class="row">
-                                          <div class="col-md-12 form-horizontal">
+                                          <div class="col-md-12 form-horizontal text-center">
+                                              <span class="help-block"><i class="fa fa-globe"></i> ข้อมูลจะถูกแชร์เป็นสาธารณะ</span>
                                               <a class="btn btn-success btn-block" href="#" id="btnSubmitNewData"><i class="fa fa-floppy-o"></i> บันทึก</a>
                                           </div>
                                           <br /><br /><br />
