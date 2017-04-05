@@ -186,8 +186,9 @@
                                       <hr />
                                       <div class="row">
                                           <div class="col-md-12 form-horizontal text-center">
-                                              <span class="help-block"><i class="fa fa-globe"></i> ข้อมูลจะถูกแชร์เป็นสาธารณะ (เพื่อให้น้องๆ หรือพี่ๆ สามารถตามหาเพื่อนร่วมสายลำดับได้)<br /></span>
                                               <a class="btn btn-success btn-block" href="#" id="btnSubmitNewData"><i class="fa fa-floppy-o"></i> บันทึก</a>
+                                              <br />
+                                              <span class="help-block"><br /><i class="fa fa-globe"></i> ข้อมูลจะถูกแชร์เป็นสาธารณะ (เพื่อให้น้องๆ หรือพี่ๆ สามารถตามหาเพื่อนร่วมสายลำดับได้)<br /></span>
                                           </div>
                                           <br /><br /><br />
                                       </div>
