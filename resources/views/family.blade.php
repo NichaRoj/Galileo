@@ -100,6 +100,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <a class="btn btn-block btn-lg btn-primary" href="/">กลับไปหน้าหลัก / เพิ่มข้อมูลของคุณ</a>
+                    <br /><br />
                 </div>
             </div>
 
