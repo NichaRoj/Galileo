@@ -64,7 +64,7 @@
             <div id="daFooter" class="footer navbar-fixed-bottom">
                 <div class="row">
                     <div class="col-xs-12 text-center">
-                        <span class="text-light">&copy; <?php echo(date("Y")); ?> <small class="text-muted">&#8226;</small> Crafted with <i class="fa fa-heart"></i> by <a href="https://namo.namodev.com" class="nuancedlink" target="_blank">@NamoDev</a> &amp; <a href="https://theminerdev.com" target="_blank" class="nuancedlink">@TheMiner3746</a> <small class="text-muted">&#8226;</small> ภาพโดย <a href="https://www.facebook.com/Cattofoto/" class="nuancedlink" target="_blank">Cattofoto</a> <small class="text-muted">&#8226;</small> <i class="fa fa-code"></i> on <a href="https://goo.gl/w22pGY" class="nuancedlink" target="_blank">GitHub</a></span>
+                        <span class="text-light">&copy; <?php echo(date("Y")); ?> <small class="text-muted">&#8226;</small> Crafted with <i class="fa fa-heart"></i> by <a href="https://namo.namodev.com" class="nuancedlink" target="_blank">@NamoDev</a> &amp; <a href="https://theminerdev.com" target="_blank" class="nuancedlink">@TheMiner3746</a> <small class="text-muted">&#8226;</small> ภาพโดย <a href="https://www.facebook.com/Cattofoto/" class="nuancedlink" target="_blank">Cattofoto</a> <small class="text-muted">&#8226;</small> <i class="fa fa-code"></i> on <a href="https://goo.gl/w22pGY" class="nuancedlink" target="_blank">GitHub</a> <small class="text-muted">&#8226;</small> <a data-toggle="modal" href="#" data-target="#dataPolicyModal" class="nuancedlink">Data Policy</a></span>
                         <br />
                         <span class="text-light">เว็บไซต์นี้ไม่ใช่เว็บประกาศผล และถูกสร้างขึ้นโดยนักเรียน (และศิษย์เก่า) โดยไม่มีส่วนเกี่ยวข้องกับโรงเรียนเตรียมอุดมศึกษาแต่อย่างใด</span>
                         <br /><br />
@@ -72,6 +72,7 @@
                 </div>
             </div>
         </div>
+
         <!-- =================== -->
         <div class="modal fade" id="addDataModal" role="dialog">
             <div class="modal-dialog modal-lg">
@@ -187,7 +188,7 @@
                                       <div class="row">
                                           <div class="col-md-12 form-horizontal text-center">
                                               <a class="btn btn-success btn-block" href="#" id="btnSubmitNewData"><i class="fa fa-floppy-o"></i> บันทึก</a>
-                                              <span class="help-block"><i class="fa fa-globe"></i> ข้อมูลจะถูกแชร์เป็นสาธารณะ (เพื่อให้น้องๆ หรือพี่ๆ สามารถตามหาเพื่อนร่วมสายลำดับได้)<br /><br /></span>
+                                              <span class="help-block" style="margin-top:10px;"><i class="fa fa-globe"></i> ข้อมูลจะถูกแชร์เป็นสาธารณะ ( เพื่อให้น้องๆ สามารถตามหาเพื่อนร่วมสายลำดับได้ )<br /></span>
                                           </div>
                                           <br /><br /><br />
                                       </div>
@@ -197,6 +198,118 @@
                       </div>
                 </div>
             </div>
+        </div>
+        <!-- =================== -->
+        <div class="modal fade" id="dataPolicyModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title"><i class="fa fa-legal"></i> Data Policy <span class="text-muted pull-right" style="margin-right:20px;">อัพเดตล่าสุดเมื่อ 04/05/2017</span></h4>
+                      </div>
+                      <div class="modal-body">
+                          <div class="row">
+                              <div class="col-sm-10 col-sm-offset-1">
+                                  <p style="font-size:1.3em;font-weight:300;">เราให้อำนาจคุณในการแชร์ข้อมูล ซึ่งเป็นภารกิจของเราในการทำให้น้องๆ สายลำดับสามารถพบกับพี่ๆ ได้สะดวกและง่ายยิ่งขึ้น นโยบายนี้อธิบายว่าข้อมูลอะไรบ้างที่เรารวบรวม และข้อมูลนั้นมีการใช้งานอย่างไร</p>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-sm-10 col-sm-offset-1">
+                                <h4 class="text-light">เราเก็บรวบรวมข้อมูลประเภทใดบ้าง</h4>
+                                <p>เราเก็บรวมรวมข้อมูลประเภทต่างๆ จากคุณหรือเกี่ยวกับตัวคุณ ทั้งนี้โดยขึ้นอยู่กับว่าคุณใช้บริการใด</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="well">
+                                            <small><b>สิ่งที่คุณทำ และข้อมูลที่คุณให้</b></small>
+                                            <p>
+                                                เราเก็บรวบรวมเนื้อหาและข้อมูลอื่นๆ ที่คุณให้เมื่อคุณใช้บริการของเรา โดยรวมถึงเมื่อคุณเพิ่มข้อมูลติดต่อเข้าในระบบของเรา ข้อมูลเหล่านี้อาจรวมถึงข้อมูลที่อยู่ในเนื้อหาที่คุณให้ เช่นการฝากข้อความ
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="well">
+                                            <small><b>ข้อมูลของอุปกรณ์ และการเชื่อมต่อเครือข่าย</b></small>
+                                            <p>
+                                                เราเก็บรวบรวมข้อมูลที่มาจาก หรือเกี่ยวกับคอมพิวเตอร์ โทรศัพท์ หรืออุปกรณ์อื่นๆ ที่คุณใช้ในการเข้าถึงบริการของเรา ตัวอย่างบางส่วนของข้อมูลอุปกรณ์ที่เราเก็บรวบรวม เช่น:
+                                            </p>
+                                            <ul>
+                                                <li>ข้อมูลการเชื่อมต่อ เช่น ชื่อของผู้ให้บริการเครือข่าย ประเภทเบราว์เซอร์ ภาษาและเขตเวลา และที่อยู่ IP (IP address)</li>
+                                                <li>แอตทริบิวต์ต่างๆ เช่น ระบบปฏิบัติการ ขนาดและความละเอียดของหน้าจอ เวอร์ชันของซอฟต์แวร์และฮาร์ดแวร์</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-sm-10 col-sm-offset-1">
+                                <h4 class="text-light">ข้อมูลนี้มีการแชร์อย่างไร</h4>
+                                <p>จุดมุ่งหมายของเราคือการทำให้น้องลำดับและพี่ๆ สามารถพบกันได้ง่ายยิ่งขึ้น<br />ซึ่งเราทำให้เป็นไปได้โดยการแชร์ข้อมูลของคุณในรูปแบบต่อไปนี้:</p>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="well">
+                                            <small><b>จัดเก็บข้อมูลเพื่อการค้นหาแบบสาธารณะ</b></small>
+                                            <p>
+                                                เมื่อคุณบันทึกข้อมูลติดต่อโดยใช้บริการของเรา เราจะทำการบันทึกข้อมูลนั้น และจัดเก็บเข้าสู่ฐานข้อมูลสายลำดับ ซึ่งเป็นฐานข้อมูลสาธารณะที่สามารถค้นหาได้ (โดยการค้นหาด้วยลำดับ) และเปิดเผยต่อทุกคนทั้งในหรือนอกบริการของเรา
+                                                <br /><br />
+                                                เรามีการใช้มาตรการทางเทคนิคในการป้องกันไม่ให้เครื่องมือค้นหาออนไลน์และโปรแกรมอัตโนมัติทำการจัดเก็บ (index) ข้อมูลสายลำดับ และข้อมูลติดต่อ โดยมีข้อยกเว้นคือระบบจัดเก็บข้อมูลทางประวัติศาสตร์ของ Internet Archive <a href="https://archive.org" target="_blank">(https://archive.org)</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-sm-10 col-sm-offset-1">
+                                <h4 class="text-light">เราใช้ข้อมูลนี้อย่างไร</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="well">
+                                            <small><b>ให้บริการ ปรับปรุงบริการ และพัฒนาบริการ</b></small>
+                                            <p>
+                                                <ul>
+                                                    <li>เราสามารถส่งมอบบริการแก่คุณได้ โดยการใช้ข้อมูลนี้เพื่อทำความเข้าใจว่าคุณใช้และโต้ตอบกับบริการของเราอย่างไร</li>
+                                                    <li>เราวิเคราะห์ข้อมูลที่เรามี เพื่อทำการประเมิน และปรับปรุงการให้บริการของเรา รวมไปถึงการตรวจสอบและการแก้ไขปัญหาต่างๆ</li>
+                                                    <li>ข้อมูลที่จัดเก็บจะถูกรักษาไว้เป็นความลับ ยกเว้นในส่วนของข้อมูลติดต่อ ซึ่งเป็นสาธารณะและสามารถค้นหาได้จากหน้าเว็บของเรา</li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="well">
+                                            <small><b>คำขอทางกฎหมาย</b></small>
+                                            <p>
+                                                เราอาจเข้าถึง รักษา และแชร์ข้อมูลของคุณเพื่อตอบสนองต่อคำขอตามกฎหมาย (เช่น หมายค้น คำสั่งศาล หรือหมายเรียก) หากเราเชื่อโดยสุจริตว่ากฎหมายต้องการให้เราทำเช่นนั้น และสอดคล้องกับมาตรฐานที่ยอมรับกันโดยสากล
+                                                <br /><br />
+                                                จนถึง ณ วันนี้ เรายังไม่เคยรับคำขอเพื่อเปิดเผยข้อมูลจากหน่วยงานราชการใดๆ หากเราได้รับคำขอเช่นนั้น เราจะพยายามอย่างที่สุดในการแจ้งให้สาธารณะทราบถึงคำขอนั้น
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                          <hr />
+                          <div class="row">
+                              <div class="col-sm-10 col-sm-offset-1">
+                                  <div class="well">
+                                      <small><b>ความปลอดภัยของข้อมูล</b></small>
+                                      <p>เรามีการใช้มาตรการทางเทคนิคตามมาตรฐานความปลอดภัยที่ได้รับการยอมรับโดยสากล เพื่อรักษาความปลอดภัยของระบบ เช่น: </p>
+                                      <ul>
+                                          <li>การเข้ารหัสข้อมูลระหว่างการส่งผ่านเครือข่าย โดยมาตรฐาน TLS (transport layer security) เพื่อป้องกันการดักจับข้อมูลระหว่างการส่งผ่านเครือข่าย</li>
+                                          <li>การจัดเก็บรหัสผ่านแบบเข้ารหัสทางเดียว (hash) ด้วยอัลกอริทึมที่ได้รับการยอมรับโดยสากล เพื่อป้องกันรหัสผ่านรั่วไหล</li>
+                                      </ul>
+                                  </div>
+                                  <div class="well">
+                                      <small><b>Disclaimer</b></small>
+                                      <p>เว็บไซต์นี้ไม่ใช่เว็บประกาศผล และไม่มีส่วนเกี่ยวข้องกับโรงเรียนเตรียมอุดมศึกษาแต่อย่างใด</p>
+                                      <p>อนึ่ง ข้อมูลในระบบนี้ ถูกสร้างขึ้นจากการกรอกข้อมูลของแต่ละบุคคลด้วยตนเอง เราไม่มีนโยบายในการสร้างหรือนำข้อมูลจากแหล่งอื่นๆ เข้ามาในระบบ และเราไม่สามารถยืนยันหรือตรวจสอบได้ว่าข้อมูลในระบบเป็นจริงหรือเท็จแต่ประการใด</p>
+                                  </div>
+                                  <h6 class="text-light"><i class="fa fa-asterisk"></i> เราใช้คุกกี้และเทคโนโลยีอื่นที่คล้ายคลึงกันในการให้และสนับสนุนบริการของเรา ซึ่งรวมถึง แต่ไม่จำกัดเพียง การยืนยันตัวตนและสิทธิ์การใช้งานของผู้ใช้ การรักษาความปลอดภัย และการวิเคราะห์การใช้งานระบบ (analytics)</h6>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
         </div>
         <!-- =================== -->
         <script src="/assets/js/jquery-3.1.1.min.js"></script>
