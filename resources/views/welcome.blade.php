@@ -64,7 +64,7 @@
             <div id="daFooter" class="footer navbar-fixed-bottom">
                 <div class="row">
                     <div class="col-xs-12 text-center">
-                        <span class="text-light">&copy; <?php echo(date("Y")); ?> <small class="text-muted">&#8226;</small> Crafted with <i class="fa fa-heart"></i> by <a href="https://namo.namodev.com" class="nuancedlink" target="_blank">@NamoDev</a> &amp; <a href="https://theminerdev.com" target="_blank" class="nuancedlink">@TheMiner3746</a> <small class="text-muted">&#8226;</small> ภาพโดย <a href="https://www.facebook.com/Cattofoto/" class="nuancedlink" target="_blank">Cattofoto</a> <small class="text-muted">&#8226;</small> <i class="fa fa-code"></i> on <a href="https://goo.gl/w22pGY" class="nuancedlink" target="_blank">GitHub</a> <small class="text-muted">&#8226;</small> <a data-toggle="modal" href="#" data-target="#dataPolicyModal" class="nuancedlink">Data Policy</a></span>
+                        <span class="text-light">&copy; <?php echo(date("Y")); ?> <small class="text-muted">&#8226;</small> Crafted with <i class="fa fa-heart"></i> by <a href="https://namo.namodev.com" class="nuancedlink" target="_blank">@NamoDev</a> &amp; <a href="https://theminerdev.com" target="_blank" class="nuancedlink">@TheMiner3746</a> <small class="text-muted">&#8226;</small> ภาพโดย <a href="https://www.facebook.com/Cattofoto/" class="nuancedlink" target="_blank">Cattofoto</a> <small class="text-muted">&#8226;</small> <i class="fa fa-code"></i> on <a href="https://goo.gl/w22pGY" class="nuancedlink" target="_blank">GitHub</a> <small class="text-muted">&#8226;</small> <a href="#" id="dataPolicyLink" class="nuancedlink">Data Policy</a></span>
                         <br />
                         <span class="text-light">เว็บไซต์นี้ไม่ใช่เว็บประกาศผล และถูกสร้างขึ้นโดยนักเรียน (และศิษย์เก่า) โดยไม่มีส่วนเกี่ยวข้องกับโรงเรียนเตรียมอุดมศึกษาแต่อย่างใด</span>
                         <br /><br />
@@ -336,6 +336,12 @@
                     $("#daFooter").css({"margin-top": "0px"});
                 }
             }
+
+            $("#dataPolicyLink").click(function(e){
+                e.preventDefault();
+                $("#dataPolicyModal").modal("show");
+                ga("send", "pageview", "/data-policy");
+            });
 
             $("#btnSearch").click(function(e){
                 e.preventDefault();
