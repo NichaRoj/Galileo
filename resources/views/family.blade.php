@@ -41,7 +41,7 @@
                         <div class="col-md-6">
                             <div class="well">
                                 <h5 class="text-semilight">
-                                    <b class="text-pink">TU{{ $member['generation'] }}:</b> {{ $member['title'] }}{{ $member['fname'] }} {{ $member['lname'] }} ({{ $member['nickname'] }})
+                                    <b class="text-pink">TU{{ $member['generation'] }}:</b> {{ $member['title'] }}{{ $member['fname'] }} {{ $member['lname'] }} @if (!empty($member['nickname']))({{ $member['nickname'] }}) @endif
                                 </h5>
                                 <hr />
                                 <div class="row contactInfoRow">
