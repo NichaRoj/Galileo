@@ -17,6 +17,10 @@ class FamilyController extends Controller{
             abort(404);
         }
 
+        if(!in_array($program, ['sc', 'am', 'af', 'ad', 'aj', 'as', 'ac', 'ak'])){
+            abort(404);
+        }
+
         return view('family')
                 ->with('family', $family)
                 ->with('rank', $rank)
