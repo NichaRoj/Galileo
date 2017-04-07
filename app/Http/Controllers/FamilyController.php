@@ -17,7 +17,10 @@ class FamilyController extends Controller{
             abort(404);
         }
 
-        return view('family')->with('family', $family)->with('rank', $rank)->with('program', $program);
+        return view('family')
+                ->with('family', $family)
+                ->with('rank', $rank)
+                ->with('program', $program);
     }
 
     public function getStudentData(Request $request, $id){
